@@ -1,0 +1,31 @@
+# VS 本地设置
+.vs/
+*.user
+*.suo
+
+# 编译输出
+*.obj
+*.lib
+*.pdb
+*.idb
+*.ilk
+*.exp
+*.exe
+*.dll
+*.log
+*.pch
+*.bsc
+*.res
+
+# 中间目录
+Debug/
+Release/
+out/
+x64/
+ipch/
+*.ipdb
+*.iobj
+
+# 临时文件
+*.bak
+*.tmp
