@@ -5,6 +5,7 @@
 
 # 编译输出
 /build/
+/intermediates/
 *.obj
 *.lib
 *.pdb
