@@ -31,12 +31,11 @@
     <ProjectGuid>{584EA69D-3443-4197-8994-364880FC1B9B}</ProjectGuid>
     <ProjectName>emule</ProjectName>
     <RootNamespace>emule</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Label="Configuration">
     <CharacterSet>Unicode</CharacterSet>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v141_xp</PlatformToolset>
     <UseOfMfc>Static</UseOfMfc>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
@@ -52,8 +51,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)'=='Debug' or '$(Configuration)'=='Release'">
     <ExtensionsToDeleteOnClean>*.obj;*.ilk;*.pdb;*.tlb;*.tli;*.tlh;*.tmp;*.rsp;*.bat;*.asm;</ExtensionsToDeleteOnClean>
-    <IntDir>$(SolutionDir)build\intermediates\$(Platform)\$(Configuration)\</IntDir>
-    <OutDir>$(SolutionDir)build\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+    <OutDir>$(Platform)\$(Configuration)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)'=='_SpecialBootstrapNodes'">
     <ExtensionsToDeleteOnClean>*.obj;*.ilk;*.pdb;*.tlb;*.tli;*.tlh;*.tmp;*.rsp;*.bat;*.asm;</ExtensionsToDeleteOnClean>
