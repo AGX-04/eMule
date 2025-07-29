@@ -4,6 +4,7 @@
 *.suo
 
 # 编译输出
+/build/
 *.obj
 *.lib
 *.pdb
@@ -29,3 +30,6 @@ ipch/
 # 临时文件
 *.bak
 *.tmp
+
+# 本地库
+/libs/*/
