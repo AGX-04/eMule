@@ -33,3 +33,4 @@ ipch/
 
 # 本地库
 /libs/*/
+/deps/
