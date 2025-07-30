@@ -59,6 +59,10 @@
     <IntDir>$(Platform)\Debug\</IntDir>
     <OutDir>$(Platform)\Debug\</OutDir>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>C:\github\eMule\CxImageLite\;C:\github\eMule\zlib;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\github\eMule\libs;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <AdditionalIncludeDirectories>.;..;..\id3lib\include;..\mbedtls\include;..\mbedtls\tf-psa-crypto\include;..\mbedtls\tf-psa-crypto\drivers\builtin\include;$(VC_ATLMFC_SourcePath);$(UniversalCRTSdkDir)Include\10.0.26100.0\um\;$(UniversalCRTSdkDir)Include\10.0.26100.0\shared;</AdditionalIncludeDirectories>
@@ -111,17 +115,17 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>.;..;..\id3lib\include;..\mbedtls\include;..\mbedtls\tf-psa-crypto\include;..\mbedtls\tf-psa-crypto\drivers\builtin\include;$(VC_ATLMFC_SourcePath);$(UniversalCRTSdkDir)Include\10.0.26100.0\um\;$(UniversalCRTSdkDir)Include\10.0.26100.0\shared;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Windows Kits\10\Include\10.0.22621.0\shared;D:\Windows Kits\10\Include\10.0.22621.0\um;C:\github\eMule\CxImageLite;.;..;..\id3lib\include;..\mbedtls\include;C:\github\eMule\mbedtls\include\mbedtls;..\mbedtls\tf-psa-crypto\include;..\mbedtls\tf-psa-crypto\drivers\builtin\include;$(VC_ATLMFC_SourcePath);$(UniversalCRTSdkDir)Include\10.0.26100.0\um\;$(UniversalCRTSdkDir)Include\10.0.26100.0\shared</AdditionalIncludeDirectories>
       <AdditionalOptions>/Zc:throwingNew</AdditionalOptions>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <OmitFramePointers>true</OmitFramePointers>
       <PrecompiledHeader>Use</PrecompiledHeader>
-      <PreprocessorDefinitions>ID3LIB_LINKOPTION=1;MINIUPNP_STATICLIB;SUPPORT_LARGE_FILES;NDEBUG;XP_BUILD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>ID3LIB_LINKOPTION=1;MINIUPNP_STATICLIB;SUPPORT_LARGE_FILES;NDEBUG;XP_BUILD;MBEDTLS_THREADING_ALT;MBEDTLS_THREADING_C;CXIMAGE_SUPPORT_PNG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <WarningLevel>EnableAllWarnings</WarningLevel>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>ADSIId.lib;crypt32.lib;iphlpapi.lib;version.lib;winmm.lib;ws2_32.lib;..\cryptopp\$(Platform)\$(Configuration)\cryptlib.lib;..\cximage\$(Platform)\$(Configuration)\cximage.lib;..\id3lib\libprj\$(Platform)\$(Configuration)\id3lib.lib;..\libpng\projects\visualc\$(Platform)\$(Configuration)\libpng.lib;..\mbedtls\visualc\vs2017\$(Platform)\$(Configuration)\mbedtls.lib;..\miniupnpc\msvc\$(Platform)\$(Configuration)\miniupnpc.lib;..\resizablelib\$(Platform)\$(Configuration)\resizablelib.lib;..\zlib\contrib\vstudio\vc\$(Platform)\$(Configuration)\zlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ADSIId.lib;crypt32.lib;iphlpapi.lib;version.lib;winmm.lib;ws2_32.lib;zlib.lib;cryptlib.lib;cximage.lib;id3lib.lib;libpng.lib;mbedtls.lib;miniupnpc.lib;resizablelib.lib;bcrypt.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/safeseh</AdditionalOptions>
       <DelayLoadDLLs>gdiplus.dll;msimg32.dll;oleacc.dll;ws2_32.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -129,6 +133,7 @@
       <LargeAddressAware>true</LargeAddressAware>
       <OptimizeReferences>true</OptimizeReferences>
       <SubSystem>Windows</SubSystem>
+      <AdditionalLibraryDirectories>C:\github\eMule\libs;C:\github\eMule\zlib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <Manifest>
       <AdditionalManifestFiles>res/$(TargetName)$(Platform).manifest %(AdditionalManifestFiles)</AdditionalManifestFiles>
