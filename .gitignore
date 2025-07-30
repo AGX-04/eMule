@@ -35,3 +35,21 @@ ipch/
 # 本地库
 /libs
 /deps/
+/cryptopp
+/CxImage
+/id3lib
+/libpng/projects
+/mbedtls
+/miniupnpc
+/ResizableLib
+/zlib
+/mbedtls
+/libpng
+/jasper
+/jpeg
+/libpsd
+/mng
+/png
+/raw
+/tiff
+/CxImageLite
